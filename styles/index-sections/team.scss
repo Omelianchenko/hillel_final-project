@@ -87,29 +87,29 @@
     padding-top: 6px;
 }
 
-.team__dots {
-    margin: 30px auto 60px;
+.scroll-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 30px;
+}
+
+.scroll__button {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: #24a4ff34;
-    position: relative;
-    &::after, &::before {
-        content: '';
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background-color: v.$active-color_hover;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);    
+    background-color: v.$active-color_regular;
+    &:not(:first-child) {
+        background-color: #24a4ff48;
+        &:hover {
+            background-color: #24a4ff8b;
+        }
     }
-    &::after {
-        left: 31px;
-        background-color: #24a4ff34;
-    }
-    &::before {
-        right: 31px;
-        background-color: #24A3FF;
+}
+.scroll__button_extra {
+    @media screen and (min-width: 768px) {
+        display: none;
     }
 }

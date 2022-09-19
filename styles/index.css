@@ -905,35 +905,37 @@ body {
   padding-top: 6px;
 }
 
-.team__dots {
-  margin: 30px auto 60px;
+.scroll-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 30px;
+}
+
+.scroll__button {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: rgba(36, 164, 255, 0.2039215686);
-  position: relative;
-}
-.team__dots::after, .team__dots::before {
-  content: "";
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #0085FF;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.team__dots::after {
-  left: 31px;
-  background-color: rgba(36, 164, 255, 0.2039215686);
-}
-.team__dots::before {
-  right: 31px;
   background-color: #24A3FF;
+}
+.scroll__button:not(:first-child) {
+  background-color: rgba(36, 164, 255, 0.2823529412);
+}
+.scroll__button:not(:first-child):hover {
+  background-color: rgba(36, 164, 255, 0.5450980392);
+}
+
+@media screen and (min-width: 768px) {
+  .scroll__button_extra {
+    display: none;
+  }
 }
 
 .customers-section {
   width: 100%;
+  padding-top: 60px;
 }
 @media screen and (min-width: 1720px) and (max-width: 1920px) {
   .customers-section {
