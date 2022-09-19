@@ -1,0 +1,13 @@
+@use './common/_reset.css';
+@use './common/_fonts.css';
+@use './common/variables' as v;
+@use './common/mixins' as m;
+@use './common/elements';
+@use './index-sections/header.scss';
+@use './index-sections/intro.scss';
+@use './index-sections/advantages.scss';
+@use './index-sections/team.scss';
+@use './index-sections/customers.scss';
+@use './index-sections/publications.scss';
+@use './index-sections/footer.scss';
+@use './about-sections/about.scss';

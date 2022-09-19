@@ -1,0 +1,70 @@
+@use '../common/variables' as v;
+@use '../common/mixins' as m;
+
+/*----------------------------------------footer-----------------------*/
+
+.footer {
+    background-color: v.$bg-color;
+}
+
+.footer-conteiner {
+    padding: 30px 0;
+    border-top: 2px solid v.$separator-color;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    @media screen and (min-width: 738px) {
+        flex-flow: row wrap;
+    }
+}
+
+.footer-adress {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    @media screen and (min-width: 738px) {
+        flex-flow: row wrap;
+        justify-content:flex-start;
+    }
+}
+.footer-adress__link {
+    text-transform: uppercase;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    @media screen and (min-width: 738px) {
+        flex-flow: row wrap;
+        justify-content:flex-start;
+        order: 1;
+        width: 100%;
+    }
+}
+.footer-contacts__facebook {
+    &:hover {
+        .footer-contacts__facebook-icon {
+            fill: v.$accent-color;
+        } 
+    }
+}
+
+
+.footer__copyright {
+    padding-top: 10px;
+    color: v.$text-color;
+    display: flex;
+    align-items: center;
+    @media screen and (min-width: 738px) {
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+    }
+}

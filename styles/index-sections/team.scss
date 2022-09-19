@@ -1,0 +1,115 @@
+@use '../common/variables' as v;
+@use '../common/mixins' as m;
+
+
+.team-section { //--------------------------------team-section------------------------------
+    padding: 30px 0 0;
+}
+.team-conteiner {
+    background-color: v.$bg-color;
+    border-radius: 12px;
+    display: flex;
+    flex-flow: column wrap;
+    @media screen and (min-width: 768px) {
+        width: 648px;
+        margin: 0 auto;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 904px;
+        flex-flow: row nowrap;
+    }
+    @media screen and (min-width: 1080px) {
+        width: 100%;
+        position: relative;
+    }
+}
+
+.team-foto {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px 12px 0 0;
+    @media screen and (min-width: 1024px) {
+        width: 400px;
+        height: 528px;
+        border-radius: 12px 0 0 12px;
+    }
+    @media screen and (min-width: 1080px) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+}
+.team-foto__img {
+    width: 500px;
+    height: 500px;
+    @media screen and (min-width: 620px) {
+        width: 648px;
+        height: 648px;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 528px;
+        height: 528px;
+    }
+    @media screen and (min-width: 1080px) {
+        width: 500px;
+        height: 500px;
+    }
+    @media screen and (min-width: 1160px) {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+.team-text {
+    width: 100%;
+    padding: 30px;
+    @media screen and (min-width: 1024px) {
+        width: calc(100% - 400px);
+    }
+    @media screen and (min-width: 1080px) {
+        margin-left: 400px;
+    }
+}
+
+.team__heading {
+    padding: 5px 0 24px;
+    @media screen and (min-width: 600px) {
+        @include m.font (v.$hero-size, v.$hero-height);
+    }
+}
+.team__paragraph {
+    color: v.$text-color;
+    padding-top: 6px;
+}
+
+.team__dots {
+    margin: 30px auto 60px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #24a4ff34;
+    position: relative;
+    &::after, &::before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: v.$active-color_hover;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);    
+    }
+    &::after {
+        left: 31px;
+        background-color: #24a4ff34;
+    }
+    &::before {
+        right: 31px;
+        background-color: #24A3FF;
+    }
+}

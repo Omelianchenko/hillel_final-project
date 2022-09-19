@@ -1,0 +1,71 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: v.$basic-color_black;
+    background-color: v.$basic-color_white;
+}
+
+.heading {
+    font-weight: 700;
+    color: v.$main-color;
+}
+.heading_hero {
+    color: v.$basic-color_white;
+    @include m.font (v.$hero-size, v.$hero-height);
+}
+.heading_mobile-hero {
+    color: v.$text-color_red;
+    @include m.font (v.$hero-size_mobile, v.$hero-height_mobile);
+}
+.heading_mobile-h2 {
+    @include m.font (v.$h2-size_mobile, v.$h2-height_mobile);
+}
+.heading_h3 {
+    @include m.font (v.$h3-size, v.$h3-height);
+}
+.heading_caps-h3 {
+    @include m.font (v.$h3-size_caps, v.$h3-height_caps);
+}
+.heading_h4 {
+    @include m.font (v.$h4-size, v.$h4-height);
+}
+
+.paragraph {
+    color: v.$basic-color_black;
+    @include m.font (v.$paragraph-size, v.$paragraph-height);
+}
+.paragraph_small {
+    @include m.font (v.$paragraph-size_small, v.$paragraph-height_small);
+}
+.paragraph_extra-small {
+    @include m.font (v.$paragraph-size_extra-small, v.$paragraph-height_extra-small);
+}
+.paragraph_white {
+    color: v.$basic-color_white;
+}
+
+.list {
+    color: v.$basic-color_black;
+    @include m.font (v.$list-size, v.$list-height);
+    list-style-type: circle;
+}
+.list_ordered {
+    list-style-type: armenian;
+}
+.link {
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+.text-link {
+    color: v.$active-color_regular;
+    &:hover {
+        color: v.$accent-color;
+    } 
+}

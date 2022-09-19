@@ -1,0 +1,192 @@
+@use '../common/variables' as v;
+@use '../common/mixins' as m;
+
+
+.advantages-section { //---------------------------advantages-section------------------------
+    width: 100%;
+    padding: 30px 0 0 0;
+    @media screen and (min-width: 750px) {
+        padding: 60px 0 0 0;
+    }
+}
+.common__conteiner {
+    width: 84%;
+    margin: 0 auto;
+    @media screen and (min-width: 750px) {
+        width: 100%;
+        padding: 0px 60px;
+    }
+    @media screen and (min-width: 1720px) {
+        width: 1720px;
+        
+    }
+}
+.feature {
+    @media screen and (min-width: 944px) {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @media screen and (min-width: 1024px) {
+        gap: 60px;
+    } 
+    @media screen and (min-width: 1200px) {
+        width: 1080px;
+        margin: 0 auto;
+    }
+    @media screen and (min-width: 1441px) {
+        width: 100%;
+        margin: 0;
+        padding: 0 120px;
+    }   
+}
+.feature-items {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    gap: 30px;
+    width: calc(100% + 30px);
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @media screen and (min-width: 750px) {
+        width: calc(100% + 60px);
+    }
+    @media screen and (min-width: 944px) {
+        width: 375px;
+        flex-flow: column nowrap;
+        align-items:flex-end;
+        justify-content: space-between;
+    }
+}
+.feature__item {
+    color:v.$text-color;
+    white-space: nowrap;
+    &:hover:not(:first-child) {
+        color: v.$accent-color;
+    }
+    &:first-child {
+        color: v.$text-color_red;
+        cursor:auto;    
+    }
+    @media screen and (min-width: 600px) {
+        @include m.font (v.$hero-size, v.$hero-height);
+    }
+}
+.feature__separator {
+   background-color: rgba(255, 255, 255, 0.3);
+   margin: 5vh 0 5vh;
+   height: 4px;
+   @media screen and (min-height: 700px) {
+        margin: 60px 0 60px;
+    }
+    @media screen and (min-width: 944px) {
+        width: 4px;
+        height: 303px;
+        margin: 0;
+    }
+}
+
+.feature-text {
+    @media screen and (min-width: 944px) {
+        width: 405px;
+    }
+    @media screen and (min-width: 1024px) {
+        width: calc(100% - 499px);
+    }
+}
+.feature-text__heading {
+    color: v.$basic-color_white;
+    padding-bottom: 30px;
+    @media screen and (min-width: 600px) {
+        @include m.font (v.$hero-size_mobile, v.$hero-height_mobile)
+    }
+}
+.feature-text__paragraph {
+    @include m.font (19px, 30px);
+    padding-right: 2px;
+}
+.feature__service-conteiner {
+    padding: 5vh 0 10px;
+    @media screen and (min-height: 700px) {
+        padding: 60px 0 10px;
+    }
+}
+.link-arrow {
+    text-transform: uppercase;
+    &:hover {
+        .link-arrow__arrow {
+            stroke: #F0145A; 
+        }    
+    }
+}
+
+.offers__heading {
+    @media screen and (min-width: 600px) {
+        @include m.font (v.$hero-size, v.$hero-height);
+    }
+}
+.offers__conteiner {
+    padding: 30px 0 60px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    @media screen and (min-width: 657px) {
+        flex-flow: row wrap;
+    }
+    @media screen and (min-width: 1024px) {
+        gap: 60px;
+    }
+}
+.offer {
+    max-width: 493px;
+    @media screen and (min-width: 657px) {
+        width: 261px;
+    }
+    @media screen and (min-width: 687px) {
+        width: calc(50% - 30px);
+    }
+    @media screen and (min-width: 964px) {
+        width: 261px;
+    }
+    @media screen and (min-width: 1024px) {
+        width: calc(33.33% - 40px);
+    }
+}
+.offer__item {
+    &:hover {
+        .offer__heading {
+            color: v.$accent-color;
+        } 
+    }
+}
+
+.offer__icon {
+    width: 92px;
+    height: 92px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: v.$basic-color_white;
+}
+
+.offer__heading {
+    padding: 30px 0 10px;
+    color: v.$active-color_regular;
+}
+
+.main__underline {
+    height: 10px;
+    border-radius: 0 0 12px 12px;
+    margin: 0 40px;
+    background-color:#E7E7F2;
+}
+.main__underline_dark {
+    margin: 0 20px;
+    background-color:#CACADB;
+}

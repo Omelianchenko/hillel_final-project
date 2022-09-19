@@ -1,0 +1,95 @@
+@use '../common/variables' as v;
+@use '../common/mixins' as m;
+
+/*--------------------------------info-section-----------------------*/
+
+.info-section {
+    width: 100%;
+    padding: 137px 0 30px;
+    @media screen and (min-width: 524px) {
+        padding: 176px 0 30px;
+    }
+    @media screen and (min-width: 605px) {
+        padding: 245px 0 30px;
+    }
+    @media screen and (min-width: 944px) {
+        padding: 176px 0 30px;
+    }
+}
+
+.info-progresses {
+    display: flex;
+    flex-flow: column wrap;
+    @media screen and (min-width: 860px) {
+        flex-flow: row nowrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+}
+
+.progresses__heading {
+    @media screen and (min-width: 600px) {
+        @include m.font (v.$hero-size, v.$hero-height);
+    }
+}
+
+.info__paragraph {
+    padding: 30px 0;
+    @include m.font (19px, 30px);
+}
+
+.progresses__items {
+    padding-left: 30px;
+    border-left: 4px solid v.$separator-color;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 40px;
+    justify-content: space-between;
+    @media screen and (min-width: 860px) {
+        width: 385px;
+    }
+}
+
+.progress-conteiner {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 12px;
+
+}
+
+.progress__heading {
+    @include m.font (36px, 44px);
+    @media screen and (min-width: 600px) {
+        @include m.font (v.$hero-size, v.$hero-height);
+    }
+}
+
+.progress__paragraph {
+    color: v.$main-color;
+    padding-top: 10px;
+}
+
+.quality-conteiner {
+    @media screen and (min-width: 860px) {
+        flex-flow: row nowrap;
+        justify-content: center;
+        gap: 60px;
+    }
+}
+
+.together {
+    width: 100%;
+    height: 30vw;
+    margin: 30px 0 0 0;
+    @media screen and (min-width: 600px) {
+        margin: 60px 0 30px;
+    }
+}
+.together__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
