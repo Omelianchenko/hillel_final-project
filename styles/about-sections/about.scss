@@ -154,9 +154,6 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
-    :not(::first-child) {
-        display: none;
-    }
 }
 .achievement {
     display: flex;
@@ -169,7 +166,10 @@
     @media screen and (min-width: 768px) {
         width: calc((100% - 120px)/4);
     }
-    &:not(::first-child) {
+    &:not(:first-child) {
         display: none;
+        @media screen and (min-width: 768px) {
+            display: flex;
+        }
     }
 }

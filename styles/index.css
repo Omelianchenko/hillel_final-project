@@ -1379,9 +1379,6 @@ body {
   align-items: center;
   gap: 40px;
 }
-.achievements-conteiner :not(::first-child) {
-  display: none;
-}
 
 .achievement {
   display: flex;
@@ -1397,8 +1394,13 @@ body {
     width: calc((100% - 120px) / 4);
   }
 }
-.achievement:not(::first-child) {
+.achievement:not(:first-child) {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .achievement:not(:first-child) {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
