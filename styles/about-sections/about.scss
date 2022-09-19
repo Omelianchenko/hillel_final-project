@@ -47,15 +47,18 @@
     gap: 40px;
     justify-content: space-between;
     @media screen and (min-width: 860px) {
-        width: 385px;
+        height: 328px
     }
 }
 
 .progress-conteiner {
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
     gap: 12px;
-
+    @media screen and (min-width: 860px) {
+        width: 385px
+    }
 }
 
 .progress__heading {
@@ -72,10 +75,21 @@
 
 .quality-conteiner {
     @media screen and (min-width: 860px) {
+        display: flex;
         flex-flow: row nowrap;
         justify-content: center;
         gap: 60px;
     }
+}
+
+.quality__heading {
+    @media screen and (min-width: 600px) {
+        @include m.font (v.$hero-size, v.$hero-height);
+    }
+    @media screen and (min-width: 860px) {
+        min-width: 325px;
+        max-width: 325px;
+    } 
 }
 
 .together {

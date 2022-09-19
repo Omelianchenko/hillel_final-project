@@ -1255,14 +1255,20 @@ body {
 }
 @media screen and (min-width: 860px) {
   .progresses__items {
-    width: 385px;
+    height: 328px;
   }
 }
 
 .progress-conteiner {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
   gap: 12px;
+}
+@media screen and (min-width: 860px) {
+  .progress-conteiner {
+    width: 385px;
+  }
 }
 
 .progress__heading {
@@ -1283,9 +1289,23 @@ body {
 
 @media screen and (min-width: 860px) {
   .quality-conteiner {
+    display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     gap: 60px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .quality__heading {
+    font-size: 38px;
+    line-height: 46px;
+  }
+}
+@media screen and (min-width: 860px) {
+  .quality__heading {
+    min-width: 325px;
+    max-width: 325px;
   }
 }
 
