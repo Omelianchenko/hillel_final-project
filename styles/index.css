@@ -1370,6 +1370,7 @@ body {
 .achievements__heading {
   text-transform: uppercase;
   padding-bottom: 30px;
+  text-align: center;
 }
 
 .achievements-conteiner {
@@ -1400,6 +1401,15 @@ body {
 @media screen and (min-width: 768px) {
   .achievement:not(:first-child) {
     display: flex;
+  }
+}
+
+.achievement__img {
+  height: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .achievement__img {
+    height: 60px;
   }
 }
 
