@@ -5,7 +5,7 @@
 
 .info-section {
     width: 100%;
-    padding: 137px 0 30px;
+    padding-top: 137px;
     @media screen and (min-width: 524px) {
         padding: 176px 0 30px;
     }
@@ -25,7 +25,18 @@
         justify-content: center;
         gap: 30px;
     }
+    @media screen and (min-width: 1720px) {
+        padding: 0 120px;
+    }
+}
 
+.progresses_text {
+    @media screen and (min-width: 860px) {
+        max-width: 662px;
+    }
+    @media screen and (min-width: 1720px) {
+        max-width: 945px;
+    }
 }
 
 .progresses__heading {
@@ -73,12 +84,26 @@
     padding-top: 10px;
 }
 
+
+
 .quality-conteiner {
     @media screen and (min-width: 860px) {
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
         gap: 60px;
+    }
+    @media screen and (min-width: 1720px) {
+        padding: 0 120px;
+    }
+}
+
+.quality__paragraph {
+    @media screen and (min-width: 860px) {
+        max-width: 698px;
+    } 
+    @media screen and (min-width: 1720px) {
+        max-width: 940px;
     }
 }
 
@@ -89,8 +114,11 @@
     @media screen and (min-width: 860px) {
         min-width: 325px;
         max-width: 325px;
+        padding-top: 30px;
     } 
 }
+
+
 
 .together {
     width: 100%;
@@ -106,4 +134,42 @@
     height: 100%;
     object-position: center;
     object-fit: cover;
+}
+
+
+.achievements {
+    width: 100%;
+    background-color: v.$bg-color;
+    padding: 30px 0;
+}
+
+.achievements__heading {
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
+.achievements-conteiner {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    :not(::first-child) {
+        display: none;
+    }
+}
+.achievement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: v.$basic-color_white;
+    border-radius: 12px;
+    height: 110px;
+    width: calc(100% - 30px);
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 120px)/4);
+    }
+    &:not(::first-child) {
+        display: none;
+    }
 }
